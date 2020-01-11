@@ -11,9 +11,15 @@ import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 public class Indexer extends Subsystem {
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
-  private CANSparkMax 
+
+  private CANSparkMax index_leftMotor;
+  private CANSparkMax index_rightMotor;
+  private CANSparkMax feed_motor;
+
 public Indexer() {
-    
+    index_leftMotor = new CANSparkMax(1);
+    index_rightMotor = new CANSparkMax(2);
+    feed_motor = new CANSparkMax(3);
 }
 
   @Override
